@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Thingeverse</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+</head>
+
+<body>
+
+    <header>
+
+        <p class="Sitename">Thingiverse</p>
+        <div class="search">Найти модель</div>
+        <button class="Addadetail">Добавить деталь</button>
+
+    </header>
+    <main>
+        <div>
+            <p class="Name">Anet A8 Rear Frame Brace</p>
+            <div class="Slider">
+                <div class="SliderSwitch">
+                    <img class="imgSlide"
+                        src="https://cdn.thingiverse.com/renders/d5/4b/00/7a/f8/9caca6163265030c58bdc0ad28db98f5_preview_featured.jpg"
+                        alt="" width="800px">
+                    <img class="imgSlide"
+                        src="https://cdn.thingiverse.com/renders/31/fc/8a/a7/2b/5a3c80752a9d7450ebdea8fe4afc5dca_preview_featured.jpg"
+                        alt="" width="800px">
+                    <img class="imgSlide"
+                        src="https://cdn.thingiverse.com/renders/09/f3/a2/dc/f9/728d6dcb6a10399761d78849ba621f3f_preview_featured.jpg"
+                        alt="" width="800px">
+                    <img class="imgSlide"
+                        src="https://cdn.thingiverse.com/assets/54/2a/49/98/24/featured_preview_Framesupport_Distance.jpg"
+                        alt="" width="800px">
+                </div>
+            </div>
+            <div class="slidebottom">
+                <button class="ButtonPrev">&lt;</button>
+                <img src="https://cdn.thingiverse.com/renders/d5/4b/00/7a/f8/9caca6163265030c58bdc0ad28db98f5_preview_featured.jpg"
+                    alt="" width="100px">
+                <img src="https://cdn.thingiverse.com/renders/31/fc/8a/a7/2b/5a3c80752a9d7450ebdea8fe4afc5dca_preview_featured.jpg"
+                    alt="" width="100px">
+                <img src="https://cdn.thingiverse.com/renders/09/f3/a2/dc/f9/728d6dcb6a10399761d78849ba621f3f_preview_featured.jpg"
+                    alt="" width="100px">
+                <img src="https://cdn.thingiverse.com/assets/54/2a/49/98/24/featured_preview_Framesupport_Distance.jpg"
+                    alt="" width="100px">
+                <button class="ButtonNext">&gt;</button>
+            </div>
+
+            <script>
+                let SlideID = document.querySelectorAll(".imgSlide");
+                let Count = SlideID.length;
+                let change = 0;
+                const sliderLine = document.querySelector('.SliderSwitch');
+
+
+                document.querySelector('.ButtonNext').addEventListener('click', function () {
+                    change += 630;
+                    if (change > ((Count - 1) * 630)) {
+                        change = 0;
+                    }
+                    sliderLine.style.left = -change + 'px';
+                });
+
+                document.querySelector('.ButtonPrev').addEventListener('click', function () {
+                    change -= 630;
+                    if (change < 0) {
+                        change = ((Count - 1) * 630);
+                    }
+                    sliderLine.style.left = -change + 'px';
+                });
+            </script>
+
+            <div class="buttonsa">
+                <a href="model.html">Открыть 3D-модель</a>
+                <a href="">Скачать модель</a>
+            </div>
+        </div>
+        <div class="description">
+            There are several rear frame braces for the Anet A8 3d printer. However all put stress on the 2 screws
+            holding the stepper motor firewall which in my opinion isn't the best approach.
+            The optimal setup would be to brace the stepper motor itself but I didn't like the idea because the heat
+            from the stepper motor would not dissipate as well. I therefore decided to do the next best thing by bracing
+            the firewall which supports the stepper motor.
+            The frame brace is designed so that you only need to loosen the 2 rear nuts on the middle frame support and
+            slide it underneath. Then re-tighten the 2 nuts.
+            See pictures for more details.
+            <p>
+                Make sure that your slicer program is set to 100% scale. You will also need to rotate to object to make
+                it
+                fit on the heat bed.
+            </p>
+            <p>
+                Please let me know if you have a problem with the design so I can improve it if necessary.
+            </p>
+            <p>
+                Also please post a picture with comments if you have made one.
+            </p>
+            <p>
+                Thanks.
+            </p>
+
+        </div>
+        <div></div>
+
+    </main>
+
+</body>
+
+</html>
